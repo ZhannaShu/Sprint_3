@@ -1,5 +1,9 @@
+from selenium import webdriver
 from selenium.webdriver.common.by import By
-class TestStellarBurgers:
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
+class TestRegistration:
     def test_registration(self, driver):
         name = 'Zanna'
         email = 'Zanna_Shuvalova_8777@yandex.ru'
