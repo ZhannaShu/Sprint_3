@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 class TestRegistration:
-    def test_registration(self, driver):
+    def test_reg(self, driver):
         name = 'Zanna'
         email = 'Zanna_Shuvalova_8777@yandex.ru'
         password = '123456'

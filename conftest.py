@@ -8,7 +8,7 @@ def driver():
     options = Options()
     options.add_argument("--window-size=1200,600")
 
-    browser = webdriver.Chrome(options=options)
+    browser = webdriver.Chrome(options=options, executable_path="./chromedriver")
     browser.get(url)
 
     yield browser
