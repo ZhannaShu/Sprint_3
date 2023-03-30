@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class TestData:
     url = 'https://stellarburgers.nomoreparties.site/'
-    valid_email = 'Zanna_Shuvalova_8777@yandex.ru'
+    valid_email = 'zanna_shuvalova_8777@yandex.ru'
     valid_password = '123456'
     name = 'Zanna'
     invalid_password = '12345'
