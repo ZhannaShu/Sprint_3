@@ -1,19 +1,17 @@
 # выход из аккаунта
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+from locator import Locator
+
 
 class TestLogout:
-    def test_exit_by_clicking_the_exit_button_in_account(self, personal_account):   # выход по кнопке «Выйти» в личном кабинете
-        driver = personal_account
-        driver.find_element(By.XPATH,
-                            "//p[contains(text(),'Личный Кабинет')]").click()  # клик по кнопке Личный кабинет
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
-            (By.XPATH, "//a[@href='/account/profile' and text()='Профиль']")))  # ожидание элемента Профиль
-        driver.find_element(By.XPATH, "//button[contains(text(),'Выход')]").click()
-        exit_logout = WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "//h2[contains(text(),'Вход')]"))).text
+    def test_exit_by_clicking_the_exit_button_in_account(self, go_to_personal_account):   # выход по кнопке «Выйти» в личном кабинете
+        driver = go_to_personal_account
+        driver.find_element(*Locator.ACCOUNT).click()  # клик по кнопке Личный кабинет
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locator.PROF))  # ожидание элемента Профиль
+        driver.find_element(*Locator.BUTTON_EXIT).click()   # клик по кнопке Выход в личном кабинете
+        exit_logout = WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locator.ELEMENT_ENTRY)).text  # получить текст элемента Вход в форме авторизации
         assert exit_logout == 'Вход'
 
 
