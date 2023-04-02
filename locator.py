@@ -15,21 +15,21 @@ class Locator:
     BUTTON_SING_ACCOUNT = (By.CLASS_NAME, "button_button__33qZ0")            # кнопка Войти в аккаунт на главной странице
     REG = (By.XPATH, "//p[1]/a[text()='Зарегистрироваться']")                # кнопка Зарегистрироваться в форме авторизации
     BUTTON_RESTORE_PASSWORD = (By.XPATH, "//a[@href='/forgot-password']")    # кнопка Восстановить пароль в форме авторизации
-    BUTTON_ENTER_PASSWORD_RECOVERY = (By.XPATH, "//a[@href='/login']")      # кнопка Войти в форме Восстановления пароля
+    BUTTON_ENTER_PASSWORD_RECOVERY = (By.XPATH, "//a[@href='/login']")       # кнопка Войти в форме Восстановления пароля
 
     NAME = (By.XPATH, "//fieldset[1]//input[1]")                             # поле ввода Имя в форме регистрации
     EMAIL = (By.XPATH, "//fieldset[2]//input[1]")                            # поле ввода email в форме регистрации
 
-    PASSWORD = (By.XPATH, "//input[@type='password']")                    # поле ввода пароль в форме регистрации
-    BUTTON_COME_INTO_REG = (By.XPATH, "//a[@href='/login']")              # кнопка Войти в форме регистрации
-    REG_REG = (By.XPATH, "//form/button[text()='Зарегистрироваться']")    # кнопка Зарегистрироваться в форме регистрации
+    PASSWORD = (By.XPATH, "//input[@type='password']")                       # поле ввода пароль в форме регистрации
+    BUTTON_COME_INTO_REG = (By.XPATH, "//a[@href='/login']")                 # кнопка Войти в форме регистрации
+    REG_REG = (By.XPATH, "//form/button[text()='Зарегистрироваться']")       # кнопка Зарегистрироваться в форме регистрации
     BUTTON_USER_EXISTS = (By.XPATH, "//p[@class='input__error text_type_main-default']")   # кнопка Такой пользователь уже существует
-    REG_ERROR = (By.XPATH, "//fieldset[3]/div/p")                         # элемент Некорректный пароль в форме авторизации
+    REG_ERROR = (By.XPATH, "//fieldset[3]/div/p")                            # элемент Некорректный пароль в форме авторизации
 
-    ELEMENT_EMAIL = (By.XPATH, '//fieldset[1]//input[1]')                 # поле ввода Email в форме авторизации
-    ELEMENT_PASSWORD = (By.XPATH, '//fieldset[2]//input')                 # поле ввода Пароль в форме авторизации
-    BUTTON_COME_INTO = (By.XPATH, "//button[contains(text(),'Войти')]")   # кнопка Войти в форме авторизации
-    CHECKOUT = (By.XPATH, "//button[text()='Оформить заказ']")            # кнопка Оформить заказ на главной странице
+    ELEMENT_EMAIL = (By.XPATH, '//fieldset[1]//input[1]')                    # поле ввода Email в форме авторизации
+    ELEMENT_PASSWORD = (By.XPATH, '//fieldset[2]//input')                    # поле ввода Пароль в форме авторизации
+    BUTTON_COME_INTO = (By.XPATH, "//button[contains(text(),'Войти')]")      # кнопка Войти в форме авторизации
+    CHECKOUT = (By.XPATH, "//button[text()='Оформить заказ']")               # кнопка Оформить заказ на главной странице
 
     BUTTON_EXIT = (By.XPATH, "//button[contains(text(),'Выход')]")            # кнопка Выход в личном кабинете
     ELEMENT_ENTRY = (By.XPATH, "//h2[contains(text(),'Вход')]")               # элемент Вход в форме авторизации

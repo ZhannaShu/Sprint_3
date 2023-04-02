@@ -15,7 +15,7 @@ class TestAccountLogin:
     def test_login_Personal_account(self, personal_account):    # вход по кнопке «Личный кабинет»
         driver = personal_account
         driver.find_element(*Locator.BUTTON_COME_INTO).click()  # клик по кнопке Войти в форме авторизации
-        text_button = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((Locator.CHECKOUT))).text
+        text_button = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((Locator.CHECKOUT))).text  # ожидание кнопки Оформить заказ и получить текст
         assert text_button == 'Оформить заказ'
 
 
